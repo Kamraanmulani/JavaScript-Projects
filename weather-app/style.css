@@ -1,0 +1,255 @@
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#app {
+  position: relative;
+  width: 434px;
+  height: 444px;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  padding: 40px 0px;
+  overflow: hidden;
+  border-radius: 45px;
+  background-image: linear-gradient(
+    325deg,
+    hsl(240deg 97% 55%) 0%,
+    hsl(240deg 97% 65%) 32%,
+    hsl(240deg 97% 70%) 59%,
+    hsl(240deg 96% 75%) 74%,
+    hsl(240deg 96% 79%) 84%,
+    hsl(240deg 96% 82%) 90%,
+    hsl(240deg 96% 85%) 94%,
+    hsl(240deg 96% 88%) 97%,
+    hsl(240deg 96% 91%) 99%,
+    hsl(240deg 96% 93%) 100%,
+    hsl(240deg 96% 96%) 100%,
+    hsl(240deg 95% 98%) 100%,
+    hsl(0deg 0% 100%) 100%
+  );
+}
+
+#searchbar {
+  display: flex;
+  padding: 0 40px;
+  margin-bottom: 30px;
+}
+
+#searchbar-input {
+  background-color: none;
+  border: none;
+  outline: none;
+  width: 90%;
+  background: transparent;
+  color: #fff;
+  border-bottom: solid 1px lightblue;
+  font-size: 1.5rem;
+}
+#searchicon {
+  background: transparent;
+  color: #fff;
+  background-color: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+input::placeholder {
+  color: #fff;
+  opacity: 0.6;
+  font-size: 1.3rem;
+}
+
+#info {
+  line-height: 0.5rem;
+  color: #fff;
+}
+
+#info h3 {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0.6em;
+}
+
+.desc p {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
+
+#temp {
+  color: #fff;
+  font-size: 30px;
+}
+
+#extrainfo {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  border: black 2px;
+  padding-bottom: 30px;
+}
+
+#extrainfo h5 {
+  text-transform: uppercase;
+} */
+
+
+/* style.css */
+
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+#app {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Search bar */
+#searchbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#searchbar-input {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+#searchicon {
+  width: 20%;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchicon i {
+  font-size: 18px;
+}
+
+/* Info section */
+#info {
+  margin-bottom: 20px;
+}
+
+#info #date {
+  font-size: 14px;
+  color: #888;
+}
+
+#info #city {
+  font-size: 24px;
+  margin-top: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Temperature image */
+#temp-img {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: url('weather-icon.png') no-repeat center center;
+  background-size: contain;
+}
+
+/* Description */
+.desc {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Temperature */
+#temp {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #e67e22;
+}
+
+/* Extra info */
+#extrainfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+#extrainfo .info {
+  width: 45%;
+  background: #f7f7f7;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#extrainfo h5 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #888;
+}
+
+#extrainfo p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+  #searchbar {
+    flex-direction: column;
+  }
+
+  #searchbar-input, #searchicon {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #extrainfo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #extrainfo .info {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
